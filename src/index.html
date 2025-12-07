@@ -6,9 +6,73 @@
   <link href="./output.css" rel="stylesheet">
   <title>Portfolio Landing Page</title>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="font-montserrat">
+    <div class="hero bg-pink flex flex-col items-center gap-8">
+        <header class="flex items-center justify-between mt-10 px-5 w-full lg:w-[1440px] mx-auto relative">
+            <div>
+                <img src="/src/assets/img/Logo.svg" alt="Logo">
+            </div>
+
+            <ul class="hidden md:flex items-center">
+                <li class="mx-4">
+                    <a class="text-lg font-bold text-dark hover:text-red transition-colors" href="#">About</a>
+                </li>
+                <li class="mx-4">
+                    <a class="text-lg font-bold text-dark hover:text-red transition-colors" href="#">Services</a>
+                </li>
+                <li class="mx-4">
+                    <a class="text-lg font-bold text-dark hover:text-red transition-colors" href="#">Portfolio</a>
+                </li>
+                <li class="mx-4">
+                    <a class="text-lg font-bold text-dark hover:text-red transition-colors" href="#">Blog</a>
+                </li>
+            </ul>
+
+            <a class="hidden md:block text-base font-bold py-3 px-6 bg-dark text-white hover:bg-red transition-all duration-100" href="#">Let's Talk</a>
+
+            <button id="menu-button" class="md:hidden text-dark p-2 focus:outline-none z-20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 z-10">
+                <ul class="flex flex-col items-center space-y-4">
+                    <li>
+                        <a class="text-lg font-bold text-dark hover:text-red" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="text-lg font-bold text-dark hover:text-red" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a class="text-lg font-bold text-dark hover:text-red" href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="text-lg font-bold text-dark hover:text-red" href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a class="mt-4 text-base font-bold py-3 px-6 bg-dark text-white hover:bg-red transition-all duration-100 block" href="#">Let's Talk</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="flex justify-between items-center flex-nowrap w-[1440px] px-5">
+            <div class="left w-2/5">
+                <div>
+                    <span class="text-xl text-dark ">UX Designer</span>
+                    <h1 class="text-5xl font-bold leading-18">Hi There, I'm <br><span class="text-red">John Smith</span></h1>
+                    <p class="text-base text-dark">Welcome to my portfolio of captivating digital experiences. Explore my work and let's create something extraordinary together.</p>
+                </div>
+                <div class="flex gap-5 mt-7">
+                    <a class="text-base font-bold py-3 px-14 bg-dark hover:bg-red text-white" href="#">Hire Me</a>
+                    <a class="text-base font-bold py-3 px-14 text-dark border border-dark hover:bg-red hover:text-white hover:border-red" href="#">Portfolio</a>
+                </div>
+            </div>
+            <div class="right w-3/5 flex items-end justify-end">
+                <img src="assets/img/ux%20model.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
