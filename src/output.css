@@ -202,6 +202,9 @@
   .relative {
     position: relative;
   }
+  .-top-7 {
+    top: calc(var(--spacing) * -7);
+  }
   .-top-16 {
     top: calc(var(--spacing) * -16);
   }
@@ -223,6 +226,9 @@
   .left-\[33\%\] {
     left: 33%;
   }
+  .left-\[50\%\] {
+    left: 50%;
+  }
   .z-50 {
     z-index: 50;
   }
@@ -231,6 +237,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .-mt-7 {
+    margin-top: calc(var(--spacing) * -7);
   }
   .-mt-\[125px\] {
     margin-top: calc(125px * -1);
@@ -250,6 +259,15 @@
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
+  }
+  .mt-\[-150px\] {
+    margin-top: -150px;
+  }
+  .-mb-7 {
+    margin-bottom: calc(var(--spacing) * -7);
+  }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }
@@ -261,6 +279,9 @@
   }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
   }
   .block {
     display: block;
@@ -277,6 +298,9 @@
   .table {
     display: table;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -292,6 +316,12 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
   .h-36 {
     height: calc(var(--spacing) * 36);
   }
@@ -300,6 +330,9 @@
   }
   .h-\[5px\] {
     height: 5px;
+  }
+  .h-\[70px\] {
+    height: 70px;
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -312,6 +345,12 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
@@ -331,6 +370,9 @@
   .w-\[70\%\] {
     width: 70%;
   }
+  .w-\[70px\] {
+    width: 70px;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
@@ -339,6 +381,9 @@
   }
   .w-\[95\%\] {
     width: 95%;
+  }
+  .w-\[780px\] {
+    width: 780px;
   }
   .w-full {
     width: 100%;
@@ -351,6 +396,10 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .-translate-x-\[50\%\] {
+    --tw-translate-x: calc(50% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -418,6 +467,9 @@
   .gap-60 {
     gap: calc(var(--spacing) * 60);
   }
+  .gap-y-8 {
+    row-gap: calc(var(--spacing) * 8);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -448,6 +500,12 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .object-top {
+    object-position: top;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -485,8 +543,14 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
+  }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
   }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
@@ -760,6 +824,11 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .lg\:w-\[780px\] {
+    @media (width >= 64rem) {
+      width: 780px;
+    }
+  }
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -780,6 +849,21 @@
       color: var(--color-white);
     }
   }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -910,6 +994,9 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
